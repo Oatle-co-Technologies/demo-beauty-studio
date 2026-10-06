@@ -1,0 +1,5 @@
+.rose-divider { position: relative; width: min(1184px, calc(100% - 2.5rem)); height: 100px; margin: 0 auto; pointer-events: none; }
+.rose-divider svg { width: 100%; height: 100%; overflow: visible; }
+.rose-divider path { fill: none; stroke: var(--rose); stroke-width: 1.25; vector-effect: non-scaling-stroke; stroke-linecap: round; opacity: .8; }
+.rose-divider img { position: absolute; top: 50%; left: 64%; transform: translate(-50%, -50%) rotate(-12deg); width: clamp(65px, 8vw, 96px); height: auto; }
+@media (max-width: 600px) { .rose-divider { height: 80px; } }

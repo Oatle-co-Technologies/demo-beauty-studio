@@ -1,0 +1,9 @@
+.reviews { max-width: 1280px; margin: 0 auto; padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem); border-top: 0; text-align: center; color: var(--white); scroll-margin-top: 2rem; }
+.reviews h2 { margin: 1rem 0 1.5rem; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1; font-weight: 400; }
+.reviews-note { max-width: 620px; margin: 0 auto 2.5rem; font-size: 1rem; line-height: 1.6; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.review-card { display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem; border: 1px solid var(--rose); border-radius: 12px; background: #171214; }
+.review-quote-mark { height: 3rem; color: var(--rose); font: 5rem/1 Georgia, serif; }
+.review-card blockquote { flex: 1; margin: 1rem 0 1.5rem; font-size: 1.25rem; line-height: 1.65; }
+.review-card figcaption { padding-top: 1rem; border-top: 1px solid var(--rose); color: var(--rose-light); font-size: .9rem; letter-spacing: .06em; }
+@media (max-width: 800px) { .reviews-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; } }

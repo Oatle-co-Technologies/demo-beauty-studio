@@ -1,0 +1,18 @@
+.site-footer { background: #fff; color: var(--black); text-align: center; padding-bottom: 2.5rem; }
+.footer-content { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem 0; }
+.footer-brand { display: inline-flex; align-items: center; justify-content: center; gap: .85rem; color: var(--rose); font-family: var(--font-script); font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; }
+.footer-content > p { margin-top: .75rem; font-size: 1.15rem; line-height: 1.6; }
+.footer-content > .footer-area { font-size: 1rem; color: #595959; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; margin: 2rem 0; }
+.footer-links a { padding: .5rem 0; font-size: 1rem; }
+.footer-links a:hover { color: #9e4658; }
+.site-footer a:focus-visible { outline: 2px solid var(--rose-light); outline-offset: 5px; }
+.footer-content small { display: block; color: #595959; font-size: .9rem; }
+
+.footer-socials { display: flex; justify-content: center; gap: 1rem; margin: 0 0 2rem; }
+.footer-social { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--rose); border-radius: 50%; color: var(--black); }
+.footer-social svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.footer-social .social-dot { fill: currentColor; stroke: none; }
+
+.footer-brand-logo { width: 65px; height: 80px; object-fit: contain; flex-shrink: 0; }
+@media (max-width: 480px) { .footer-brand { font-size: 2rem; gap: .5rem; } .footer-brand-logo { width: 48px; height: 60px; } }
