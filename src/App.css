@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 280px;
   min-height: 100vh;
   background: var(--black);
   color: var(--white);
@@ -248,7 +248,7 @@ a {
   position: absolute;
   inset: 0;
 
-  background-image: url("./assets/hero-roses.png");
+  background-image: url("./assets/hero-roses.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -372,3 +372,17 @@ main h3 { color: var(--rose); }
 }
 
 #home, #services, #about, #how-it-works, #booking, #reviews { scroll-margin-top: 125px; }
+
+@media (max-width: 700px) {
+  .hero { min-height: calc(100svh - 68px); padding: 3rem 1.25rem; }
+  .brand-lockup { flex-direction: column; gap: 1.5rem; margin-bottom: 1rem; }
+  .brand-mark { width: clamp(130px, 38vw, 190px); }
+  .brand-lockup h1 { align-items: center; text-align: center; font-size: clamp(3.75rem, 16vw, 6.5rem); line-height: .85; }
+  .hero-description { max-width: 100%; letter-spacing: .04em; }
+  #home, #services, #about, #how-it-works, #booking, #reviews { scroll-margin-top: 85px; }
+}
+
+@media (max-width: 800px) {
+  .service-image-1 { grid-column: span 2; grid-row: span 1; }
+  .service-image-7 { grid-column: span 1; }
+}

@@ -74,3 +74,16 @@
 .nav-brand-logo { width: 48px; height: 58px; object-fit: contain; flex-shrink: 0; }
 
 .navbar { box-shadow: 0 2px 14px rgba(0, 0, 0, .08); }
+
+.nav-toggle { display: none; }
+@media (max-width: 1000px) {
+  .navbar { padding: .75rem 1rem; flex-wrap: wrap; gap: .5rem; }
+  .nav-brand { font-size: clamp(1.2rem, 4.8vw, 1.7rem); gap: .4rem; }
+  .nav-brand-logo { width: 36px; height: 44px; }
+  .nav-toggle { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--rose); border-radius: 6px; background: #fff; color: var(--black); cursor: pointer; }
+  .nav-toggle svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+  .nav-toggle:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+  .nav-links { display: none; width: 100%; flex-direction: column; gap: .25rem; padding: .5rem 0; }
+  .nav-links.nav-links-open { display: flex; }
+  .nav-links a { display: block; padding: .85rem 1rem; text-align: center; }
+}

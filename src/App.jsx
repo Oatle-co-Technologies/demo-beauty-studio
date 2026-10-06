@@ -7,15 +7,15 @@ import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import RoseDivider from "./components/RoseDivider";
 
-import beautyLogo from "./assets/beauty-studio-logo.png";
+import beautyLogo from "./assets/beauty-studio-logo.webp";
 
-import braidsImage from "./assets/services/mobile-studio-braids.jpg";
-import lashesImage from "./assets/services/mobile-studio-lashe-installation.jpg";
-import makeupImage from "./assets/services/mobile-studio-makeup.jpg";
-import massageImage from "./assets/services/mobile-studio-massages.jpg";
-import nailsImage from "./assets/services/mobile-studio-nails .jpg";
-import pedicureImage from "./assets/services/mobile-studio-pedicure.jpg";
-import eyebrowsImage from "./assets/services/mobile-stuido-eyebrowshaping.jpg";
+import braidsImage from "./assets/services/mobile-studio-braids.webp";
+import lashesImage from "./assets/services/mobile-studio-lashe-installation.webp";
+import makeupImage from "./assets/services/mobile-studio-makeup.webp";
+import massageImage from "./assets/services/mobile-studio-massages.webp";
+import nailsImage from "./assets/services/mobile-studio-nails .webp";
+import pedicureImage from "./assets/services/mobile-studio-pedicure.webp";
+import eyebrowsImage from "./assets/services/mobile-stuido-eyebrowshaping.webp";
 
 const services = [
   {
@@ -88,7 +88,7 @@ function App() {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (preference.matches || !("IntersectionObserver" in window)) return;
     const elements = [...document.querySelectorAll(
-      ".services-heading, .service-image, .studio-story-heading, .studio-about-copy, .visit-steps li, .booking-intro, .booking-panel, .reviews > h2, .reviews-note, .review-card, .footer-content, .rose-divider"
+      ".services-heading, .service-image, .studio-story-heading, .studio-about-copy, .visit-steps li, .booking-intro, .booking-panel, .reviews > h2, .reviews-note, .review-card, .footer-content"
     )];
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(({ target, isIntersecting }) => {
@@ -188,6 +188,8 @@ function App() {
           <div className="brand-lockup">
             <img
               src={beautyLogo}
+              loading="eager"
+              fetchPriority="high"
               alt=""
               className="brand-mark"
             />
@@ -218,7 +220,7 @@ function App() {
       <RoseDivider />
       <section className="services" id="services">
         <div className="services-heading">
-          <p className="section-eyebrow">Our Services</p>
+          <p className="section-eyebrow">Services &amp; Pricing</p>
 
           <h2>
             Beauty,

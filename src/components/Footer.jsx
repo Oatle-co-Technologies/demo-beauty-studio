@@ -1,15 +1,15 @@
-import beautyLogo from "../assets/beauty-studio-logo.png";
+import beautyLogo from "../assets/beauty-studio-logo.webp";
 import "./Footer.css";
 
 export default function Footer() {
   const year = new Intl.DateTimeFormat("en-ZA", { year: "numeric", timeZone: "Africa/Johannesburg" }).format(new Date());
   return <footer className="site-footer">
     <div className="footer-content">
-      <a className="footer-brand" href="#home"><img src={beautyLogo} alt="" className="footer-brand-logo" /><span>Mobile Beauty Studio</span></a>
+      <a className="footer-brand" href="#home"><img src={beautyLogo} loading="eager" alt="" className="footer-brand-logo" /><span>Mobile Beauty Studio</span></a>
       <p>Beauty, brought to you.</p>
       <p className="footer-area">Pretoria & surrounding areas</p>
       <nav className="footer-links" aria-label="Footer navigation">
-        <a href="#services">Services</a>
+        <a href="#services">Services &amp; Pricing</a>
         <a href="#about">About</a>
         <a href="#how-it-works">How it works</a>
         <a href="#booking">Bookings</a>
