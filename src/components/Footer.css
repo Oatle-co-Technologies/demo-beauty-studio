@@ -4,7 +4,7 @@
 .footer-content > p { margin-top: .75rem; font-size: 1.15rem; line-height: 1.6; }
 .footer-content > .footer-area { font-size: 1rem; color: #595959; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; margin: 2rem 0; }
-.footer-links a { padding: .5rem 0; font-size: 1rem; }
+.footer-links a { color: var(--rose); padding: .5rem 0; font-size: 1rem; }
 .footer-links a:hover { color: #9e4658; }
 .site-footer a:focus-visible { outline: 2px solid var(--rose-light); outline-offset: 5px; }
 .footer-content small { display: block; color: #595959; font-size: .9rem; }
@@ -16,3 +16,8 @@
 
 .footer-brand-logo { width: 65px; height: 80px; object-fit: contain; flex-shrink: 0; }
 @media (max-width: 480px) { .footer-brand { font-size: 2rem; gap: .5rem; } .footer-brand-logo { width: 48px; height: 60px; } }
+
+@media (max-width: 600px) {
+  .footer-links { flex-direction: column; align-items: center; gap: .25rem; }
+  .footer-links a { max-width: 100%; min-height: 44px; display: flex; align-items: center; justify-content: center; white-space: nowrap; padding: .5rem 1rem; }
+}
