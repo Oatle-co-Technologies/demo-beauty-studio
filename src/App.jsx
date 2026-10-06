@@ -1,35 +1,43 @@
 import "./App.css";
+import beautyLogo from "./assets/beauty-studio-logo.png";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <main>
-        <section className="hero">
-          <div className="hero-content">
-            <p className="eyebrow">MOBILE BEAUTY • WE COME TO YOU</p>
+    <main>
+      <section className="hero" id="home">
+        <Navbar />
 
-            <h1>Beauty, on your terms.</h1>
+        <div className="hero-content">
+          <div className="brand-lockup">
+            <img
+              src={beautyLogo}
+              alt=""
+              className="brand-mark"
+            />
 
-            <p className="hero-description">
-              Professional nails, lashes, hair and massage services brought
-              directly to your door.
-            </p>
-
-            <a href="#services" className="primary-button">
-              Book a home visit
-            </a>
-
-            <p className="service-area">Pretoria & surrounding areas</p>
+            <h1>
+              <span>Mobile</span>
+              <span>Beauty</span>
+              <span>Studio</span>
+            </h1>
           </div>
 
-          <div className="hero-image">
-            <div className="image-placeholder">
-              Beauty image
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+          <p className="hero-description">
+            Professional nails, lashes, hair and massage services brought
+            directly to your door.
+          </p>
+
+          <a href="#booking" className="primary-button">
+            Book a home visit
+          </a>
+
+          <p className="service-area">
+            Pretoria & surrounding areas
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
 
