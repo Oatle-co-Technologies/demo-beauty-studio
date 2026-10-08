@@ -30,7 +30,7 @@ export default function StudioStory() {
         <h2 id="how-title">From a little wish<br />to a home visit.</h2>
         <p>Three simple steps to beauty, brought to you.</p>
       </div>
-      <p className="visit-mobile-hint">Tap a number to see the details below it.</p>
+      <p className="visit-mobile-hint">Tap a number to explore the step.</p>
       <ol className="visit-steps">
         {steps.map((step, index) => <li key={step.title}>
           <button
@@ -38,13 +38,10 @@ export default function StudioStory() {
             className={`visit-step-number${activeStep === index ? " is-active" : ""}`}
             aria-label={`Step ${index + 1}: ${step.title}`}
             aria-expanded={activeStep === index}
-            aria-controls={`visit-step-detail-${index} visit-step-mobile-${index}`}
+            aria-controls={`visit-step-detail-${index}`}
             onClick={() => setActiveStep((current) => current === index ? null : index)}
           >0{index + 1}</button>
           <h3>{step.title}</h3>
-          <div id={`visit-step-mobile-${index}`} className="visit-step-mobile-detail" hidden={activeStep !== index}>
-            <p>{step.text}</p>
-          </div>
         </li>)}
       </ol>
       <p className="visit-step-hint">Tap a number to explore the step.</p>
@@ -55,6 +52,7 @@ export default function StudioStory() {
           className="visit-step-detail"
           hidden={activeStep !== index}
         >
+          <h3 className="visit-step-mobile-title">{step.title}</h3>
           <p>{step.text}</p>
         </div>)}
       </div>

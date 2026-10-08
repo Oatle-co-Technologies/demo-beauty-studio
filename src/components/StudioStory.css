@@ -56,17 +56,20 @@ main .visit-step-detail h3 { color: #0d0d0d; }
 button.visit-step-number { background: #ffffff; color: #0d0d0d; }
 button.visit-step-number:hover, button.visit-step-number.is-active { background: #ffffff; color: #0d0d0d; border-color: var(--rose-light); }
 
-.visit-step-mobile-detail, .visit-mobile-hint { display: none; }
+.visit-mobile-hint, .visit-step-mobile-title { display: none; }
 @media (max-width: 800px) {
  .studio-how { padding-block: 3rem; }
  .studio-how .studio-story-heading h2 { font-size: clamp(2.1rem, 8vw, 3rem); line-height: 1.1; }
  .studio-how .studio-story-heading > p:last-child { font-size: 1rem; }
  .visit-mobile-hint { display: block; font-size: .875rem; color: var(--rose-light); margin: 1.5rem 0 0; }
- .visit-steps { padding: 0; margin-top: 1.5rem; gap: 0; }
- .visit-steps li { padding: 1.5rem 0; border-bottom: 1px solid #d58b983d; }
- .visit-steps h3 { margin: 1rem 0 0; font-size: 1.4rem; }
- .visit-step-mobile-detail:not([hidden]) { display: block; padding: 1rem; margin-top: 1.25rem; background: white; color: #0d0d0d; border-radius: 8px; animation: visit-step-enter 350ms ease both; }
- .visit-step-mobile-detail p { margin: 0; font-size: 1rem; line-height: 1.65; }
- .visit-step-panels, .visit-step-hint { display: none; }
+ .visit-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; margin: 1.5rem 0; gap: 12px; }
+ .visit-steps li { padding: 0; border: 0; }
+ .visit-steps li > h3 { display: none; }
+ .visit-step-number { width: 54px; height: 54px; }
+ .visit-step-number.is-active { outline: 2px solid var(--rose-light); outline-offset: 3px; }
+ .visit-step-hint { display: none; }
+ .visit-step-panels { margin-top: 1.5rem; }
+ .visit-step-detail { padding: 1.25rem; }
+ main .visit-step-detail .visit-step-mobile-title { display: block; color: #a33360; font-size: 1.4rem; line-height: 1.25; margin: 0 0 .8rem; }
+ .visit-step-detail p { margin: 0; font-size: 1rem; line-height: 1.65; }
 }
-@media (prefers-reduced-motion: reduce) { .visit-step-mobile-detail:not([hidden]) { animation: none; } }
